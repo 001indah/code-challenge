@@ -12,29 +12,6 @@ import iconPurple from '@/public/iconPurple.webp';
 import History from '../History';
 
 
-// const cardData = [
-//     {
-//         title: "Purwadhika is a life changer",
-//         icon: iconGreen,
-//         background: bgGreen,
-//         picture: companyProfile,
-//         desc: "Join our 30.000+ alumni who have achieved dream careers in the digital industry from various backgrounds."
-//     },
-//     {
-//         title: "Proven by industry",
-//         icon: iconPurple,
-//         background: bgPurple,
-//         picture: hiringPartner,
-//         desc: "Purwadhika has become the talent pool for 1.000+ hiring partner companies from various industries across Asia."
-//     },
-//     {
-//         title: "Lifetime career support",
-//         icon: iconOrenge,
-//         background: bgOrange,
-//         picture: careerNetwork,
-//         desc: "From building CV to interview preparation and career coaching, Purwadhika is ready to assist you become top digital talent!"
-//     }
-// ];
 const cardData = [
     {
         title: "Purwadhika is a life changer",
@@ -84,14 +61,10 @@ const AboutUs = () => {
                 <div>
                     <div className="mb-16">
 
-
-
-
                     </div>
                 </div>
             </div>
             <History />
-            {/* <Card2 /> */}
         </div>
     );
 }
