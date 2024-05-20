@@ -12,7 +12,16 @@ import iconPurple from '@/public/iconPurple.webp';
 import History from '../History';
 
 
-const cardData = [
+interface CardData {
+    title: string;
+    icon: string;
+    background: string;
+    picture: string;
+    desc: string;
+}
+
+
+const cardData: CardData[] = [
     {
         title: "Purwadhika is a life changer",
         icon: iconGreen,
@@ -36,7 +45,7 @@ const cardData = [
     }
 ];
 
-const AboutUs = () => {
+const AboutUs: React.FC = () => {
     return (
         <div className='w-full relative bg-abuSedang items-center justify-center lg:pt-[150px] lg:p-16 p-6 '>
             <p className='text-black text-2xl font-bold lg:font-semibold text-center pb-3 lg:text-[40px]'>
