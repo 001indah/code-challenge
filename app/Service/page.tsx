@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../components/Hero/button';
 import Faq from '../components/Faq'
 import Programs from '../components/Programs/index';
-import Card from '.';
+import Card from './index';
 import LabelLogo from '@/components/LabelLogo';
 
 const posts = [
@@ -55,7 +55,7 @@ const Service = () => {
                                     </div>
                                     <p className="text-xs lg:text-md font-light text-gray-800">{post.description}</p>
                                     <br className='box' />
-                                    <Button href='#' className='hover:bg-hijauMuda hover:text-black text-white text-base'>
+                                    <Button href='https://wa.link/zdtc2y' className='hover:bg-hijauMuda hover:text-black text-white text-base'>
                                         Contact Us
                                     </Button>
                                 </div>

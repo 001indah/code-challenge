@@ -16,12 +16,14 @@ const head = () => {
                         </div>
                         <div className="group relative w-full overflow-hidden rounded-xl bg-teal-600 shadow-lg md:block mb-5">
                             <div className="absolute inset-0 z-10 flex cursor-pointer items-center justify-center duration-500  hover:text-white">
+                                <a href="https://www.youtube.com/@PurwadhikaTV">
+                                    <Image
+                                        alt="playButton"
+                                        src={playButton}
+                                        className="absolute inset-0 m-auto w-[50px] lg:w-[70px]"
+                                    />
+                                </a>
 
-                                <Image
-                                    alt="playButton"
-                                    src={playButton}
-                                    className="absolute inset-0 m-auto w-[50px] lg:w-[70px]"
-                                />
                             </div>
                             <Image
                                 alt="tubnailVideo"
