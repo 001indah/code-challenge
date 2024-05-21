@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
                             </div>
                             <div className='lg:flex md:flex gap-3 my-9'>
                                 <Link href="/Service">
-                                    <Button className='border border-hijauMuda hover:border-none hover:text-black hover:bg-hijauMuda'>
+                                    <Button href="/Service" className='border border-hijauMuda hover:border-none hover:text-black hover:bg-hijauMuda'>
                                         Lihat Program
                                     </Button>
                                 </Link>
