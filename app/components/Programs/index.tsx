@@ -22,11 +22,7 @@ const Programs: React.FC = () => {
             </div>
             {/* import Button from './../Hero/button' */}
             {/* import Link from 'next/link' */}
-            <Link href="/Service">
-                <Button className='border border-hijauMuda hover:border-none hover:text-black hover:bg-hijauMuda'>
-                    Lihat Program
-                </Button>
-            </Link>
+
         </div>
     )
 }

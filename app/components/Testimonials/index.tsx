@@ -33,9 +33,7 @@ const Testimonials = () => {
                     </div>
 
                     {/* import Link from 'next/link' */}
-                    <ButtonPolos href='https://wa.link/zdtc2y' className='bg-black text-white hover:bg-hijauMuda'>
-                        Hubungi Kami
-                    </ButtonPolos>
+
 
                 </div>
             </div>
