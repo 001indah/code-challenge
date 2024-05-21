@@ -10,7 +10,7 @@ const OurTeam = () => {
 
             <Teams className='bg-black' />
             <Card />
-            <LabelLogo />
+            {/* <LabelLogo /> */}
             <Faq />
 
         </div>
