@@ -1,10 +1,11 @@
 import React from 'react'
 import Card from './Card'
-import Button from './Button'
+import Button from './../Hero/button'
 import Bag from '@/public/bag.svg'
 import People from '@/public/people.svg'
 import PeopleSit from '@/public/peopleSit.svg'
 import Hand from '@/public/hands.svg'
+import Link from 'next/link'
 
 
 const Programs: React.FC = () => {
@@ -19,7 +20,13 @@ const Programs: React.FC = () => {
                 <Card icon={PeopleSit} firstText="Options available for" span="full-time, freelance, remote, or project-based work." endText="" />
                 <Card icon={Hand} firstText="Lifetime" span="Career Support" endText="" />
             </div>
-            <Button text="Lihat Program" icon="http://www.w3.org/2000/svg" link="#" />
+            {/* import Button from './../Hero/button' */}
+            {/* import Link from 'next/link' */}
+            <Link href="/Service">
+                <Button className='border border-hijauMuda hover:border-none hover:text-black hover:bg-hijauMuda'>
+                    Lihat Program
+                </Button>
+            </Link>
         </div>
     )
 }

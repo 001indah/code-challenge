@@ -1,11 +1,11 @@
 import React from 'react'
 import Card from './Card'
-import Button from '../Programs/Button'
 import contactBanner from '@/public/contactBanner.webp'
 import willy from '@/public/Willy.webp'
 import bayu from '@/public/bayu.webp'
 import ibnu from '@/public/ibnu.webp'
 import Image from 'next/image'
+import ButtonPolos from './../Hero/buttonPolos'
 
 
 const Testimonials = () => {
@@ -31,7 +31,12 @@ const Testimonials = () => {
                             <Card photo={ibnu} name="Ibnu Sina" label="Hired two month!" company="Jr. Solutions Developer at Werkdone, Singapore" desc="“Having a mentor in the final project is very helpful! After graduation, the Purwadhika team actively offered us the positions needed by hiring partners.”" />
                         </div>
                     </div>
-                    <Button text="Lihat Selengkapnya" icon="http://www.w3.org/2000/svg" link="#" />
+
+                    {/* import Link from 'next/link' */}
+                    <ButtonPolos href='https://wa.link/zdtc2y' className='bg-black text-white hover:bg-hijauMuda'>
+                        Hubungi Kami
+                    </ButtonPolos>
+
                 </div>
             </div>
         </div>

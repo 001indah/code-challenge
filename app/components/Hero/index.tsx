@@ -5,6 +5,7 @@ import playButton from '@/public/ic_play.svg'
 import Image from 'next/image';
 import Button from './button';
 import ButtonPolos from './buttonPolos'
+import Link from 'next/link';
 
 const Programs = [
     { program: "Software development" },
@@ -34,10 +35,12 @@ const Hero: React.FC = () => {
 
                             </div>
                             <div className='lg:flex md:flex gap-3 my-9'>
-                                <Button href='#' className='border border-hijauMuda hover:border-none hover:text-black hover:bg-hijauMuda'>
-                                    Lihat Program
-                                </Button>
-                                <ButtonPolos href='#' className='bg-white text-black hover:bg-hijauMuda'>
+                                <Link href="/Service">
+                                    <Button className='border border-hijauMuda hover:border-none hover:text-black hover:bg-hijauMuda'>
+                                        Lihat Program
+                                    </Button>
+                                </Link>
+                                <ButtonPolos href='https://wa.link/zdtc2y' className='bg-white text-black hover:bg-hijauMuda'>
                                     Hubungi Kami
                                 </ButtonPolos>
                             </div>
@@ -47,11 +50,13 @@ const Hero: React.FC = () => {
                                 {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" viewBox="0 0 20 20" fill="white">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
                                 </svg> */}
-                                <Image
-                                    alt="playButton"
-                                    src={playButton}
-                                    className="absolute inset-0 m-auto w-[50px] lg:w-[70px]"
-                                />
+                                <a href="https://www.youtube.com/@PurwadhikaTV">
+                                    <Image
+                                        alt="playButton"
+                                        src={playButton}
+                                        className="absolute inset-0 m-auto w-[50px] lg:w-[70px]"
+                                    />
+                                </a>
                             </div>
                             <Image
                                 alt="tubnailVideo"
@@ -80,7 +85,7 @@ const Hero: React.FC = () => {
 
             </div>
 
-        </div>
+        </div >
     )
 }
 
