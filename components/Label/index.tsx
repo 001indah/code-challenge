@@ -12,7 +12,7 @@ const Label = () => {
         <div className='z-50 slide-text fixed top-16 lg:top-0 w-full h-8 p-2 bg-orangeMuda'>
             <Marquee pauseOnHover={true}>
                 {messages.map((message, index) => (
-                    <p key={index} className='text-xs text-black'>{message} <span className='font-bold text-orange mx-1'>UP TO 50% OFF!</span></p>
+                    <p key={index} className='text-xs text-black'>{message} <span className='font-bold text-red-900 mx-1'>UP TO 50% OFF!</span></p>
                 ))}
             </Marquee>
         </div>
