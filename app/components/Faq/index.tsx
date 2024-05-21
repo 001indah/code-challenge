@@ -47,7 +47,7 @@ const Nav = () => {
                 </ul>
             </div>
             <div className="pb-20 flex justify-center">
-                <Button>
+                <Button href='#'>
                     Still have questions
                 </Button>
             </div>

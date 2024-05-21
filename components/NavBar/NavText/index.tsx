@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ isNavbarFixed, isOpen, handleClick }) =
         { title: "About Us", href: "/AboutUs" },
         { title: "Our Teams", href: "/OurTeam" },
         { title: "Product", href: "/Service" },
-        { title: "Testimonials", href: "/Testimonials" }
+        // { title: "Testimonials", href: "/Testimonials" }
     ];
 
     return (

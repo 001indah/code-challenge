@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             <div>
                 <header className={`lg:top-8 h-16 lg:h-20 bg-black top-0 w-full flex items-center z-50 fixed ${isNavbarFixed ? 'bg-gray-100' : ''}`}>
                     <div className='w-full lg:px-4'>
-                        <div className='lg:grid md:grid md:grid-cols-[1fr,4fr] lg:grid-cols-[4fr,5fr] flex items-center justify-between relative'>
+                        <div className='lg:grid md:grid md:grid-cols-[1fr,4fr] lg:grid-cols-[3fr,2fr] flex items-center justify-between relative'>
                             <Logo isNavbarFixed={isNavbarFixed} />
                             <HamburgerButton isNavbarFixed={isNavbarFixed} isOpen={isOpen} handleClick={handleClick} />
                             <Navbar isNavbarFixed={isNavbarFixed} isOpen={isOpen} handleClick={handleClick} />

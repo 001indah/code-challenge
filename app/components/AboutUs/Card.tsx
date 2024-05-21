@@ -1,18 +1,19 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import playButton from '@/public/ic_play.svg';
 
 interface CardProps {
     title: string;
     background: string;
-    icon: string;
-    picture: string;
+    icon: string | StaticImageData;
+    picture: string | StaticImageData;
     desc: string;
+    index: number;
 }
 
-const Card: React.FC<CardProps> = ({ title, background, icon, picture, desc }) => {
+const Card: React.FC<CardProps> = ({ title, background, icon, picture, desc, index }) => {
     return (
-        <div>
+        <div >
             <section >
                 <div className='card__container block '>
                     <div className="card__content inline rounded-[1.25rem] overflow-hidden ">
