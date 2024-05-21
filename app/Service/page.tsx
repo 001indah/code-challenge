@@ -4,6 +4,7 @@ import Faq from '../components/Faq'
 import Programs from '../components/Programs/index';
 import Card from './index';
 import LabelLogo from '@/components/LabelLogo';
+import Head from './head';
 
 const posts = [
     {
@@ -34,7 +35,8 @@ const posts = [
 
 const Service = () => {
     return (
-        <div className='bg-abuSedang py-[100px]'>
+        <div className='bg-abuSedang '>
+            <Head />
             <Programs />
             <section className="pt-20">
                 <p className='font-bold lg:text-base text-[13px] text-hijauTulisan text-center lg:px-[150px] lg:py-6 mx-auto'>FEATURED PROGRAM</p>
