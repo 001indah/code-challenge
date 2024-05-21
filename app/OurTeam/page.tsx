@@ -3,15 +3,18 @@ import Teams from '../components/Teams/index'
 import Card from './Card'
 import Faq from '@/app/components/Faq'
 import LabelLogo from '@/components/LabelLogo'
+import Head from './head'
+
 
 const OurTeam = () => {
     return (
-        <div id='OurTeam' className=' bg-abuSedang pt-[150px]'>
-
-            <Teams className='bg-black' />
-            <Card />
-            {/* <LabelLogo /> */}
-            <Faq />
+        <div id='OurTeam' className=' bg-abuSedang'>
+            <Head />
+            <div >
+                <Teams />
+                <Card />
+                <Faq />
+            </div>
 
         </div>
     )
