@@ -4,9 +4,9 @@ import Testimonials from '../components/Testimonials'
 
 const Card = () => {
     return (
-        <div>
+        <div className='pb-10'>
             <Testimonials />
-            <div className="mx-5 lg:mx-20 overflow-hidden bg-white rounded-xl border shadow-lg">
+            <div className="mx-5 lg:mx-20 overflow-hidden rounded-xl border shadow-lg">
                 <div className="flex flex-col overflow-hidden bg-white sm:flex-row ">
                     <div className="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-3/5">
                         <h2 className="text-xl font-bold text-black md:text-2xl lg:text-4xl">Contact Us<span className='text-hijauTulisan'> for Free Career Consultation!</span> </h2>
