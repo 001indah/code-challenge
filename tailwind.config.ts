@@ -21,7 +21,8 @@ const config: Config = {
         "abuMuda": "#F4F4F4",
         "hijauSedang": "#409399",
         "hijauTulisan": "#32B280",
-        "abuSedang": "#eeeeee"
+        "abuSedang": "#eeeeee",
+        "hijauCakep": "#004d3f"
       }
     },
   },

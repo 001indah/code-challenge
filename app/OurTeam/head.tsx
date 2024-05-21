@@ -7,7 +7,7 @@ import tubnailVideo from '@/public/team.webp'
 const head = () => {
     return (
         <div>
-            <div className=' w-full relative bg-black items-center justify-center lg:pt-[150px] pt-[120px] overflow-hidden lg:p-16 mb-6'>
+            <div className=' w-full relative bg-hijauCakep items-center justify-center lg:pt-[150px] pt-[120px] overflow-hidden lg:p-16 mb-6'>
                 <div>
                     <div className='lg:grid lg:grid-cols-[3fr,4fr] gap-4 px-5'>
                         <div>

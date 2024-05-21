@@ -61,10 +61,10 @@ const Team = () => {
                     </div>
                 </div>
                 <div className="w-full bg-abuSedang px-8 pt-10 pb-1">
-                    <div className="container mx-auto">
-                        <div role="list" aria-label="Behind the scenes People" className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+                    <div className="container mx-auto overflow-x-auto overflow-hidden">
+                        <div role="list" aria-label="Behind the scenes People" className="lg:flex md:flex sm:flex xl:justify-between gap-5 grid grid-cols-[1fr,1fr,1fr] md:justify-around sm:justify-around lg:justify-around">
                             {selectedUsers.map((user, index) => (
-                                <div key={user.login.uuid} role="listitem" className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                <div key={user.login.uuid} role="listitem" className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-[5rem] mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
                                     <div className="rounded-xl overflow-hidden shadow-md bg-white">
                                         <div className="absolute -mt-20 w-full flex justify-center">
                                             <div className="h-32 w-32">
