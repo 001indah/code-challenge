@@ -34,12 +34,12 @@ const AboutUs = () => {
                         </ol>
                     </div>
                     <div className='p-5 border-x-2 border-black'>
-                        <h1 className='text-sm lg:text-base font-bold mb-4'>Pirwi</h1>
+                        <h1 className='text-sm lg:text-base font-bold mb-4'>Purwa</h1>
                         <p className='text-sm lg:text-base'>The Purwadhika logo shows one of the most important processes with three stages depicted by three lines to be successful in a world depicted by circles.</p>
                         <br />
                     </div>
                     <div className='p-5 border-black'>
-                        <h1 className='text-sm lg:text-base font-bold mb-4'>dhiki</h1>
+                        <h1 className='text-sm lg:text-base font-bold mb-4'>Dhika</h1>
                         <p className='text-sm lg:text-base'>The Purwadhika logo shows one of the most important processes with three stages depicted by three lines to be successful in a world depicted by circles.</p>
                     </div>
                 </div>
