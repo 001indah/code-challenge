@@ -1,4 +1,126 @@
 
+'use client'
+import React from 'react';
+import useFetchUsers from '@/app/components/RandomUser';
+
+interface User {
+    login: {
+        uuid: string;
+    };
+    name: {
+        first: string;
+        last: string;
+    };
+    picture: {
+        large: string;
+        medium: string;
+        thumbnail: string;
+    };
+
+}
+
+const Team = () => {
+    const { users, loading, error } = useFetchUsers();
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error loading users: {error.message}</p>;
+
+    const jobDescriptions = [
+        {
+            role: "Technical Team Lead",
+            description: " is the cornerstone of our technical team, providing expert guidance and support. With a strong background in software engineering and IT infrastructure, Alex ensures the seamless integration and performance of our educational platform. His leadership fosters collaboration and innovation, driving the team to implement cutting-edge technologies and best practices. Alex's dedication to maintaining a secure and scalable environment guarantees a smooth and reliable experience for all users.",
+        },
+        {
+            role: "Product Manager",
+            description: " is our meticulous Product Manager, with a keen eye for detail and a passion for innovation. With a wealth of experience in product development, Oliver drives the evolution of our IT education courses, ensuring they remain cutting-edge and impactful. His strategic insights and leadership guide our team towards delivering exceptional learning experiences tailored to meet the evolving needs of our users.",
+        },
+        {
+            role: "CTO, Lorem Inc.",
+            description: " is the visionary CTO at Lorem Inc. With a unique blend of creativity and technical prowess, she leads our design team with finesse. As the Design Team Lead, Marta orchestrates the visual identity of our IT education courses, ensuring they are not only aesthetically pleasing but also intuitive and user-friendly. Her innovative approach and attention to detail elevate our educational content, making learning a delightful experience for our users.",
+        }
+    ];
+
+
+    // Ambil 4 data pengguna pertama (atau sesuai jumlah deskripsi pekerjaan yang ada)
+    const selectedUsers = users.slice(0, jobDescriptions.length);
+
+    return (
+        <div>
+            <div className=" bg-abuSedang">
+                {/* <div className="flex flex-col items-center mx-10 lg:pt-16 px-4 md:px-8"> */}
+                <p className="text-center mb-4 text-xs font-semibold tracking-wider text-teal-900 rounded-full bg-teal-accent-400">
+                    CORE TEAM
+                </p>
+                <h2 className="m-5 text-center mb-6 text-3xl font-semibold leading-none text-black sm:text-4xl">
+                    Introducing our adept team of <span className='highlight'>technical wizards!</span>
+                </h2>
+                <p className="mx-6 text-center text-[12px] lg:text-base text-gray-700 md:text-lg">
+                    Our technique team is comprised of dedicated experts who are committed to excellence in every aspect of their work. With a keen eye for detail and a passion for innovation, they consistently strive to achieve the highest standards of quality and performance. In their pursuit of excellence, they harness their diverse skills and expertise to tackle challenges head-on and deliver exceptional results.
+                    <br /><br />
+                    Whether it's developing cutting-edge technologies, refining existing processes, or implementing creative solutions, our technique team is always at the forefront of driving progress and success.
+                    Join us in welcoming this talented group of individuals who are dedicated to shaping the future and making a meaningful impact in their respective fields.
+                </p>
+                {/* <div className="mb-10 md:mx-auto sm:text-center md:mb-12 p-5">
+        <div>
+        </div>
+    </div> */}
+                {/* </div> */}
+
+                <div className="w-full bg-abuSedang px-8 pt-10 pb-1">
+                    <div className="container mx-auto">
+                        <div role="list" aria-label="Behind the scenes People" className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+                            {selectedUsers.map((user, index) => (
+                                <div key={user.login.uuid} role="listitem" className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                                    <div className="rounded-xl overflow-hidden shadow-md bg-white">
+                                        <div className="absolute -mt-20 w-full flex justify-center">
+                                            <div className="h-32 w-32">
+                                                <img src={user.picture.large} alt={`Display Picture of ${user.name.first} ${user.name.last}`} role="img" className="rounded-full object-cover h-full w-full shadow-md" />
+                                            </div>
+                                        </div>
+                                        <div className="px-6 mt-16">
+                                            <h1 className="font-bold text:xl lg:text-3xl text-center mb-1">{user.name.first} {user.name.last}</h1>
+                                            <p className="text-gray-800 text-xs lg:text-sm text-center">{jobDescriptions[index].role}</p>
+                                            <p className="text-center text-gray-600 text-xs lg:text-base pt-3 font-normal">{user.name.first} {user.name.last} {jobDescriptions[index].description}</p>
+                                            <div className="w-full flex justify-center pt-5 pb-5">
+                                                <a href="javascript:void(0)" className="mx-5">
+                                                    <div aria-label="Github" role="img">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
+                                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0)" className="mx-5">
+                                                    <div aria-label="Twitter" role="img">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-twitter">
+                                                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                                <a href="javascript:void(0)" className="mx-5">
+                                                    <div aria-label="Instagram" role="img">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram">
+                                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Team;
+
+
 
 
 // const teamMembers: TeamMember[] = [
@@ -156,123 +278,3 @@
 // };
 
 // export default Team;
-
-'use client'
-import React from 'react';
-import useFetchUsers from '@/app/components/RandomUser';
-
-interface User {
-    login: {
-        uuid: string;
-    };
-    name: {
-        first: string;
-        last: string;
-    };
-    picture: {
-        large: string;
-        medium: string;
-        thumbnail: string;
-    };
-
-}
-
-const Team = () => {
-    const { users, loading, error } = useFetchUsers();
-
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error loading users: {error.message}</p>;
-
-    const jobDescriptions = [
-        {
-            role: "Technical Team Lead",
-            description: " is the cornerstone of our technical team, providing expert guidance and support. With a strong background in software engineering and IT infrastructure, Alex ensures the seamless integration and performance of our educational platform. His leadership fosters collaboration and innovation, driving the team to implement cutting-edge technologies and best practices. Alex's dedication to maintaining a secure and scalable environment guarantees a smooth and reliable experience for all users.",
-        },
-        {
-            role: "Product Manager",
-            description: " is our meticulous Product Manager, with a keen eye for detail and a passion for innovation. With a wealth of experience in product development, Oliver drives the evolution of our IT education courses, ensuring they remain cutting-edge and impactful. His strategic insights and leadership guide our team towards delivering exceptional learning experiences tailored to meet the evolving needs of our users.",
-        },
-        {
-            role: "CTO, Lorem Inc.",
-            description: " is the visionary CTO at Lorem Inc. With a unique blend of creativity and technical prowess, she leads our design team with finesse. As the Design Team Lead, Marta orchestrates the visual identity of our IT education courses, ensuring they are not only aesthetically pleasing but also intuitive and user-friendly. Her innovative approach and attention to detail elevate our educational content, making learning a delightful experience for our users.",
-        }
-    ];
-
-
-    // Ambil 4 data pengguna pertama (atau sesuai jumlah deskripsi pekerjaan yang ada)
-    const selectedUsers = users.slice(0, jobDescriptions.length);
-
-    return (
-        <div>
-            <div className=" bg-abuSedang">
-                <div className="container flex justify-center mx-auto lg:pt-16">
-                    <div className="mb-10 md:mx-auto sm:text-center md:mb-12">
-                        <div>
-                            <p className="text-center px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                                Core Team
-                            </p>
-                        </div>
-                        <h2 className="text-center max-w-lg mb-6 text-3xl font-semibold leading-none tracking-tight text-black sm:text-4xl md:mx-auto">
-                            Introducing our adept team of <span className='highlight'>technical wizards!</span></h2>
-                        <p className="text-[12px] lg:text-base text-gray-700 md:text-lg">
-                            Our technique team is comprised of dedicated experts who are committed to excellence in every aspect of their work. With a keen eye for detail and a passion for innovation, they consistently strive to achieve the highest standards of quality and performance. In their pursuit of excellence, they harness their diverse skills and expertise to tackle challenges head-on and deliver exceptional results.
-                            <br /><br />
-                            Whether it's developing cutting-edge technologies, refining existing processes, or implementing creative solutions, our technique team is always at the forefront of driving progress and success.
-                            Join us in welcoming this talented group of individuals who are dedicated to shaping the future and making a meaningful impact in their respective fields.
-                        </p>
-                    </div>
-                </div>
-                <div className="w-full bg-abuSedang px-8 pt-10 pb-1">
-                    <div className="container mx-auto">
-                        <div role="list" aria-label="Behind the scenes People" className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
-                            {selectedUsers.map((user, index) => (
-                                <div key={user.login.uuid} role="listitem" className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                                    <div className="rounded-xl overflow-hidden shadow-md bg-white">
-                                        <div className="absolute -mt-20 w-full flex justify-center">
-                                            <div className="h-32 w-32">
-                                                <img src={user.picture.large} alt={`Display Picture of ${user.name.first} ${user.name.last}`} role="img" className="rounded-full object-cover h-full w-full shadow-md" />
-                                            </div>
-                                        </div>
-                                        <div className="px-6 mt-16">
-                                            <h1 className="font-bold text:xl lg:text-3xl text-center mb-1">{user.name.first} {user.name.last}</h1>
-                                            <p className="text-gray-800 text-xs lg:text-sm text-center">{jobDescriptions[index].role}</p>
-                                            <p className="text-center text-gray-600 text-xs lg:text-base pt-3 font-normal">{user.name.first} {user.name.last} {jobDescriptions[index].description}</p>
-                                            <div className="w-full flex justify-center pt-5 pb-5">
-                                                <a href="javascript:void(0)" className="mx-5">
-                                                    <div aria-label="Github" role="img">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
-                                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0)" className="mx-5">
-                                                    <div aria-label="Twitter" role="img">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-twitter">
-                                                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0)" className="mx-5">
-                                                    <div aria-label="Instagram" role="img">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram">
-                                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                                        </svg>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default Team;
-
