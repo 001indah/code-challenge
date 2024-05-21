@@ -14,6 +14,7 @@ const OurTeam = () => {
                 <Teams />
                 <Card />
                 <Faq />
+                <LabelLogo />
             </div>
 
         </div>
