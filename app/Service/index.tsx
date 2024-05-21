@@ -27,7 +27,7 @@ const Card = () => {
                     </div>
 
                     <div className="order-first ml-auto h-48 w-full bg-gray-700 sm:order-none sm:h-auto sm:w-1/2 lg:w-2/5">
-                        <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" />
+                        <img className="h-full w-full object-cover" alt="smilel boys" src="https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" />
                     </div>
                 </div>
             </div>
