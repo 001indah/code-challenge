@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import playButton from '@/public/ic_play.svg'
-import tubnailVideo from '@/public/promo.webp'
+import tubnailVideo from '@/public/promo2.webp'
 
 
 const head = () => {
