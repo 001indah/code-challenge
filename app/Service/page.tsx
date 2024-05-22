@@ -11,27 +11,28 @@ const posts = [
         id: 1,
         category: 'Job Connector Bootcamp Programs',
         title: 'Visual Design',
-        description: 'Fast-track program untuk belajar dan mulai karir sebagai graphic designer dengan fasilitas koneksi kerja seumur hidup.',
+        description: 'Join our Visual Design bootcamp, a comprehensive 13-week program that equips you with the skills to become a professional graphic designer. Learn design principles, software tools like Adobe Creative Suite, and user experience design. Enjoy lifetime job connections to kickstart and advance your career.',
         imgSrc: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        tags: ['On Campus', 'Full-time', '13 week']
+        tags: ['On Campus', 'Full-time', '13 weeks']
     },
     {
         id: 2,
         category: 'Job Connector Bootcamp Programs',
         title: 'Digital Marketing',
-        description: 'Fast-track program untuk belajar dan berkarir sebagai digital marketer dengan fasilitas koneksi kerja seumur hidup.',
+        description: 'Our 14-week Digital Marketing bootcamp offers an intensive curriculum covering SEO, social media marketing, email campaigns, and data analytics. Gain hands-on experience with industry tools and strategies, and benefit from lifetime job connections to secure a role in the dynamic field of digital marketing.',
         imgSrc: 'https://plus.unsplash.com/premium_photo-1661962226606-514d1b28b183?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        tags: ['On Campus', 'Full-time', '14 week']
+        tags: ['On Campus', 'Full-time', '14 weeks']
     },
     {
         id: 3,
         category: 'Coding',
-        title: 'Software Engginering',
-        description: 'Fast-track program untuk belajar dan berkarir sebagai digital marketer dengan fasilitas koneksi kerja seumur hidup.',
+        title: 'Software Engineering',
+        description: 'Enroll in our 12-week Software Engineering bootcamp to master coding languages such as Python, JavaScript, and SQL. Learn software development methodologies, database management, and web development. Leverage our lifetime job connection services to enter and thrive in the tech industry.',
         imgSrc: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        tags: ['On Campus', 'Full-time', '12 week']
+        tags: ['On Campus', 'Full-time', '12 weeks']
     }
 ];
+
 
 const Service = () => {
     return (
