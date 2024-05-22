@@ -5,6 +5,12 @@ import Programs from '../components/Programs/index';
 import Card from './index';
 import LabelLogo from '@/components/LabelLogo';
 import Head from './head';
+import se from '@/public/logo2/se.webp'
+import desain from '@/public/logo2/desain.webp'
+import digimar from '@/public/logo2/digimar.webp'
+import Image from 'next/image';
+
+
 
 const posts = [
     {
@@ -12,7 +18,7 @@ const posts = [
         category: 'Job Connector Bootcamp Programs',
         title: 'Visual Design',
         description: 'Join our Visual Design bootcamp, a comprehensive 13-week program that equips you with the skills to become a professional graphic designer. Learn design principles, software tools like Adobe Creative Suite, and user experience design. Enjoy lifetime job connections to kickstart and advance your career.',
-        imgSrc: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imgSrc: desain,
         tags: ['On Campus', 'Full-time', '13 weeks']
     },
     {
@@ -20,7 +26,7 @@ const posts = [
         category: 'Job Connector Bootcamp Programs',
         title: 'Digital Marketing',
         description: 'Our 14-week Digital Marketing bootcamp offers an intensive curriculum covering SEO, social media marketing, email campaigns, and data analytics. Gain hands-on experience with industry tools and strategies, and benefit from lifetime job connections to secure a role in the dynamic field of digital marketing.',
-        imgSrc: 'https://plus.unsplash.com/premium_photo-1661962226606-514d1b28b183?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imgSrc: digimar,
         tags: ['On Campus', 'Full-time', '14 weeks']
     },
     {
@@ -28,7 +34,7 @@ const posts = [
         category: 'Coding',
         title: 'Software Engineering',
         description: 'Enroll in our 12-week Software Engineering bootcamp to master coding languages such as Python, JavaScript, and SQL. Learn software development methodologies, database management, and web development. Leverage our lifetime job connection services to enter and thrive in the tech industry.',
-        imgSrc: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imgSrc: se,
         tags: ['On Campus', 'Full-time', '12 weeks']
     }
 ];
@@ -47,7 +53,12 @@ const Service = () => {
                     {posts.map((post) => (
                         <div key={post.id} className="h-90 col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-2 shadow-lg transition-transform duration-200 hover:translate-y-2">
                             <a href="#" className="block h-full w-full">
-                                <img className="max-h-40 w-full object-cover" alt="featured image" src={post.imgSrc} />
+                                <Image
+                                    alt="playButton"
+                                    src={post.imgSrc}
+                                    className="max-h-40 w-full object-cover"
+                                />
+                                {/* <img className="max-h-40 w-full object-cover" alt="featured image" src={post.imgSrc} /> */}
                                 <div className="w-full bg-white p-4">
                                     <p className="text-sm lg:text-md font-medium text-hijauTulisan">{post.category}</p>
                                     <p className=" text-xl font-semibold text-black">{post.title}</p>
